@@ -60,7 +60,7 @@ class TravelController extends Controller
     public function show(Travel $travel)
     {
         $kategori = Kategori::findOrFail($id);
-        return view('kategori.show',compact('travel'));
+        return view('travel.show',compact('travel'));
     }
 
     /**
@@ -94,7 +94,7 @@ class TravelController extends Controller
         $travel = Travel::findOrFail($id);
         $travel->tempat_wisata = $request->tempat_wisata;
         $travel->artikel = $request->artikel;
-        $travel->kategori_id = $request->kategori_id;
+        $travel->kategori_id = $request->kategori_id;                                                                                                 
         $travel->save();
         return redirect()->route('travel.index');
     }

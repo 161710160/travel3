@@ -8,14 +8,14 @@
 			  	<div class="panel-title pull-right"><a href="{{ route('kategori.create') }}">Tambah</a>
                   </div>
               </div>
-              <h3>Destinasi</h3>
+              <h3><u>Nama Kota</u></h3><br>
 			  <div class="panel-body">
 			  	<div class="table-responsive">
-				  <table border='5' class="table">
+				  <table class="table table-borderless table-striped table-earning">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>
-					  <th>Destinasi</th>
+					  <th>Kota</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>

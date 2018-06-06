@@ -4,31 +4,31 @@
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Tambah Data Travel 
+			  <div class="panel-heading">Tambah Data Kuliner 
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
-			  	<form action="{{ route('travel.store') }}" method="post" >
+			  	<form action="{{ route('kuliner.store') }}" method="post" >
 			  		{{ csrf_field() }}
 
-			  		<div class="form-group {{ $errors->has('tempat_wisata') ? ' has-error' : '' }}">
-			  			<label class="control-label">Destinasi</label>	
-			  			<input type="text" name="tempat_wisata" class="form-control"  required>
-			  			@if ($errors->has('tempat_wisata'))
+			  		<div class="form-group {{ $errors->has('nama_kuliner') ? ' has-error' : '' }}">
+			  			<label class="control-label">Kuliner</label>	
+			  			<input type="text" name="nama_kuliner" class="form-control"  required>
+			  			@if ($errors->has('nama_kuliner'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('tempat_wisata') }}</strong>
+                                <strong>{{ $errors->first('nama_kuliner') }}</strong>
                             </span>
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('artikel') ? ' has-error' : '' }}">
-			  			<label class="control-label">Artikel</label>	
-			  			<textarea name="artikel" class="form-control"  required>
+			  		<div class="form-group {{ $errors->has('deskripsi') ? ' has-error' : '' }}">
+			  			<label class="control-label">Deskripsi</label>	
+			  			<textarea name="deskripsi" class="form-control"  required>
 			  			</textarea>
-						  @if ($errors->has('artikel'))
+						  @if ($errors->has('deskripsi'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('artikel') }}</strong>
+                                <strong>{{ $errors->first('deskripsi') }}</strong>
                             </span>
                         @endif
 			  		</div>

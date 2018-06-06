@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Gallery;
+use App\Artikel;
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class ArtikelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class GalleryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Gallery  $gallery
+     * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function show(Gallery $gallery)
+    public function show(Artikel $artikel)
     {
         //
     }
@@ -52,10 +52,10 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Gallery  $gallery
+     * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Gallery $gallery)
+    public function edit(Artikel $artikel)
     {
         //
     }
@@ -64,10 +64,10 @@ class GalleryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Gallery  $gallery
+     * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, Artikel $artikel)
     {
         //
     }
@@ -75,10 +75,10 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Gallery  $gallery
+     * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gallery $gallery)
+    public function destroy(Artikel $artikel)
     {
         //
     }

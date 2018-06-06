@@ -13,7 +13,7 @@
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
 			  		<div class="form-group {{ $errors->has('nama_wisata') ? ' has-error' : '' }}">
-			  			<label class="control-label">Destinasi</label>	
+			  			<label class="control-label">Kota</label>	
 			  			<input type="text" name="nama_wisata" class="form-control" value="{{ $kategori->nama_wisata }}"  required>
 			  			@if ($errors->has('nama_wisata'))
                             <span class="help-block">

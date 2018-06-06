@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
 <div class="row">
 	<div class="container">
@@ -13,7 +13,7 @@
 			  		<input name="_method" type="hidden" value="PATCH">
         			{{ csrf_field() }}
 			  		<div class="form-group {{ $errors->has('tempat_wisata') ? ' has-error' : '' }}">
-			  			<label class="control-label">Tempat Wisata</label>	
+			  			<label class="control-label">Destinasi</label>	
 			  			<input type="text" name="tempat_wisata" class="form-control" value="{{ $travel->tempat_wisata }}" required>
 			  			@if ($errors->has('tempat_wisata'))
                             <span class="help-block">
@@ -33,7 +33,7 @@
 			  		</div>
 
 			  		<div class="form-group {{ $errors->has('kategori_id') ? ' has-error' : '' }}">
-			  			<label class="control-label">Destinasi</label>	
+			  			<label class="control-label">Kota</label>	
 			  			<select name="kategori_id" class="form-control">
 			  				@foreach($kategori as $data)
 			  				<option value="{{ $data->id }}" {{ $selectedkategori == $data->id ? 'selected="selected"' : '' }} >{{ $data->nama_wisata }}</option>

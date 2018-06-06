@@ -4,41 +4,39 @@
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading">Tambah Data Travel 
+			  <div class="panel-heading">Edit Data Kuliner 
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
-			  	<form action="{{ route('travel.store') }}" method="post" >
-			  		{{ csrf_field() }}
-
-			  		<div class="form-group {{ $errors->has('tempat_wisata') ? ' has-error' : '' }}">
-			  			<label class="control-label">Destinasi</label>	
-			  			<input type="text" name="tempat_wisata" class="form-control"  required>
-			  			@if ($errors->has('tempat_wisata'))
+			  	<form action="{{ route('kuliner.update',$kuliner->id) }}" method="post" >
+			  		<input name="_method" type="hidden" value="PATCH">
+        			{{ csrf_field() }}
+			  		<div class="form-group {{ $errors->has('nama_kuliner') ? ' has-error' : '' }}">
+			  			<label class="control-label">Kuliner</label>	
+			  			<input type="text" name="nama_kuliner" class="form-control" value="{{ $kuliner->nama_kuliner }}" required>
+			  			@if ($errors->has('nama_kuliner'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('tempat_wisata') }}</strong>
+                                <strong>{{ $errors->first('nama_kuliner') }}</strong>
                             </span>
                         @endif
 			  		</div>
 
-			  		<div class="form-group {{ $errors->has('artikel') ? ' has-error' : '' }}">
-			  			<label class="control-label">Artikel</label>	
-			  			<textarea name="artikel" class="form-control"  required>
-			  			</textarea>
-						  @if ($errors->has('artikel'))
+			  		<div class="form-group {{ $errors->has('deskripsi') ? ' has-error' : '' }}">
+			  			<label class="control-label">Deskripsi</label>	
+			  			<input type="text" value="{{ $kuliner->deskripsi }}" name="deskripsi" class="form-control"  required>
+			  			@if ($errors->has('deskripsi'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('artikel') }}</strong>
+                                <strong>{{ $errors->first('deskripsi') }}</strong>
                             </span>
                         @endif
 			  		</div>
-
 
 			  		<div class="form-group {{ $errors->has('kategori_id') ? ' has-error' : '' }}">
 			  			<label class="control-label">Kota</label>	
 			  			<select name="kategori_id" class="form-control">
 			  				@foreach($kategori as $data)
-			  				<option value="{{ $data->id }}">{{ $data->nama_wisata }}</option>
+			  				<option value="{{ $data->id }}" {{ $selectedkategori == $data->id ? 'selected="selected"' : '' }} >{{ $data->nama_wisata }}</option>
 			  				@endforeach
 			  			</select>
 			  			@if ($errors->has('kategori_id'))
@@ -47,10 +45,8 @@
                             </span>
                         @endif
 			  		</div>
-
-
 			  		<div class="form-group">
-			  			<button type="submit" class="btn btn-primary">Tambah</button>
+			  			<button type="submit" class="btn btn-primary">Simpan</button>
 			  		</div>
 			  	</form>
 			  </div>
