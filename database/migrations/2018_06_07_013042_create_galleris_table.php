@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtikelsTable extends Migration
+class CreateGallerisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateArtikelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('artikels', function (Blueprint $table) {
+        Schema::create('galleris', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('judul');
-            $table->string('deskripsi');
-            $table->
+            $table->string('photos');
+            $table->unsignedInteger('travel_id');
+            $table->foreign('travel_id')->references('id')->on('travels')->onDelete('CASCADE');
             $table->timestamps();
         });
     }
@@ -26,9 +26,9 @@ class CreateArtikelsTable extends Migration
      * Reverse the migrations.
      *
      * @return void
-     */
+     */ 
     public function down()
     {
-        Schema::dropIfExists('artikels');
+        Schema::dropIfExists('galleris');
     }
 }

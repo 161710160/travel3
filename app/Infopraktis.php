@@ -8,9 +8,4 @@ class Infopraktis extends Model
 {
     protected $fillable = ['deskripsi','photos'];
     public $timestamps  = true;
-
-        public function Artikel()
-        {
-            return $this->hasOne('App\Artikel' , 'infopraktis_id');
-        }
 }

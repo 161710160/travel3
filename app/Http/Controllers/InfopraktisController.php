@@ -14,7 +14,8 @@ class InfopraktisController extends Controller
      */
     public function index()
     {
-        //
+        $info =  Infopraktis::all();
+        return view('info.index', compact('info'));
     }
 
     /**
@@ -24,7 +25,7 @@ class InfopraktisController extends Controller
      */
     public function create()
     {
-        //
+        return view('info.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class InfopraktisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nama_wisata' => 'required|',
+            ]);
+        $kategori = new Kategori;
+        $kategori->nama_wisata = $request->nama_wisata;
+        $kategori->save();
+        return redirect()->route('kategori.index');
     }
 
     /**

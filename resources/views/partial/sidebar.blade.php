@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="/assets/admin/images/icon/logo.png" alt="Cool Admin" />
+                    <img src="{{asset('assets/admin/images/icon/aku.png')}}" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -9,16 +9,16 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                                <i class="fas fa-tachometer-alt"></i>Kategori</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">Dashboard 1</a>
+                                    <a href="kategori">Kota</a>
                                 </li>
                                 <li>
-                                    <a href="index2.html">Dashboard 2</a>
+                                    <a href="travel">Destinasi</a>
                                 </li>
                                 <li>
-                                    <a href="index3.html">Dashboard 3</a>
+                                    <a href="galleri">Gallery</a>
                                 </li>
                                 <li>
                                     <a href="index4.html">Dashboard 4</a>
