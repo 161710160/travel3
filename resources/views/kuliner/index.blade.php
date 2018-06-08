@@ -8,28 +8,30 @@
 			  	<div class="panel-title pull-right"><a href="{{ route('kuliner.create') }}">Tambah</a>
                   </div>
               </div>
-              <h3><u>Kuliner</u></h3><br>
+              <h3><u><center>Kuliner</center></u></h3><br>
 			  <div class="panel-body">
 			  	<div class="table-responsive">
 				  <table class="table table-borderless table-striped table-earning">
 				  	<thead>
 			  		<tr>
 			  		  <th>No</th>
-                      <th>Nama Kuliner</th>
-                      <th>Deskripsi</th>
-					  <th>Kota</th>
-					  <th colspan="3">Action</th>
+              <th>Nama Kuliner</th>
+              <th>Deskripsi</th>
+							<th>Kota</th>
+							<th>Photo</th>
+					    <th colspan="3">Action</th>
 			  		</tr>
-				  	</thead>
-				  	<tbody>
-				  		<?php $nomor = 1; ?>
-				  		@php $no = 1; @endphp
-				  		@foreach($kuliner as $data)
-				  	  <tr>
-				    	<td>{{ $no++ }}</td>
-                        <td>{{ $data->nama_kuliner}}</td>
-                        <td>{{ $data->deskripsi}}</td>
-						<td>{{ $data->kategori->nama_wisata}}</td>
+				  	  </thead>
+				  	  <tbody>
+				  	   	<?php $nomor = 1; ?>
+				  		  @php $no = 1; @endphp
+				  		  @foreach($kuliner as $data)
+				  	    <tr>
+				      	<td>{{ $no++ }}</td>
+                <td>{{ $data->nama_kuliner}}</td>
+                <td>{{ $data->deskripsi}}</td>
+								<td>{{ $data->kategori->nama_wisata}}</td>
+								<td><img src="{{asset('../img/'.$data->photos.'')}}" width="70" height="70"></td>
 
 <td>
 	<a class="btn btn-warning" href="{{ route('kuliner.edit',$data->id) }}">Edit</a>

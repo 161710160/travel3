@@ -9,37 +9,25 @@
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
                             <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Kategori</a>
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="kategori">Kota</a>
+                                    <a href="/admin/kategori">Kota</a>
                                 </li>
                                 <li>
-                                    <a href="travel">Destinasi</a>
+                                    <a href="/admin/travel">Destinasi</a>
                                 </li>
                                 <li>
-                                    <a href="galleri">Gallery</a>
+                                    <a href="/admin/kuliner">Kuliner</a>
                                 </li>
                                 <li>
-                                    <a href="index4.html">Dashboard 4</a>
+                                    <a href="/admin/galleri">Gallery</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>Forms</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                            <a href="/admin/info">
+                                <i class="fas fa-table"></i>Info</a>
                         </li>
                         <li>
                             <a href="map.html">

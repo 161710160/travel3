@@ -15,8 +15,7 @@ class CreateInfopraktisTable extends Migration
     {
         Schema::create('infopraktis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('deskripsi');
-            $table->string('photos');
+            $table->string('tips');
             $table->timestamps();
         });
     }

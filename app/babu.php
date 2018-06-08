@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Infopraktis extends Model
+class About extends Model
 {
-    protected $fillable = ['tips'];
+    protected $fillable = ['deskripsi'];
     public $timestamps  = true;
 }

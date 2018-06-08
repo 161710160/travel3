@@ -22,14 +22,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('kategori', 'KategoriController');
-Route::resource('travel', 'TravelController');
-Route::resource('galleri', 'GalleriController');
-
 Route::group(['prefix'=> 'admin', 'middleware' => ['auth','role:admin']], function(){
     //isi route disini
     Route::resource('kategori', 'KategoriController');
     Route::resource('travel', 'TravelController');
     Route::resource('kuliner', 'KulinerController');
     Route::resource('galleri', 'GalleriController');
+    Route::resource('info', 'InfopraktisController');
+    Route::resource('about', 'AboutController');  
 });

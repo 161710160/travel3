@@ -4,19 +4,19 @@
 	<div class="container">
 		<div class="col-md-12">
 			<div class="panel panel-primary">
-			  <div class="panel-heading"><center>Tambah Data</center>  
+			  <div class="panel-heading"><center>Tambah Data</center> 
 			  	<div class="panel-title pull-right"><a href="{{ url()->previous() }}">Kembali</a>
 			  	</div>
 			  </div>
 			  <div class="panel-body">
-			  	<form action="{{ route('kategori.store') }}" method="post" >
+			  	<form action="{{ route('info.store') }}" method="post" >
 			  		{{ csrf_field() }}
-			  		<div class="form-group {{ $errors->has('nama_wisata') ? ' has-error' : '' }}">
-			  			<label class="control-label">Kota</label>	
-			  			<input type="text" name="nama_wisata" class="form-control"  required>
-			  			@if ($errors->has('nama_wisata'))
+			  		<div class="form-group {{ $errors->has('tips') ? ' has-error' : '' }}">
+			  			<label class="control-label">Tips</label>	
+			  			<input type="text" name="tips" class="form-control"  required>
+			  			@if ($errors->has('tips'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('nama_wisata') }}</strong>
+                                <strong>{{ $errors->first('tips') }}</strong>
                             </span>
                         @endif
 			  		</div>

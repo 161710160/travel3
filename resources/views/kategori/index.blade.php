@@ -8,7 +8,7 @@
 			  	<div class="panel-title pull-right"><a href="{{ route('kategori.create') }}">Tambah</a>
                   </div>
               </div>
-              <h3><u>Nama Kota</u></h3><br>
+              <h3><u><center>Nama Kota</center></u></h3><br>
 			  <div class="panel-body">
 			  	<div class="table-responsive">
 				  <table class="table table-borderless table-striped table-earning">

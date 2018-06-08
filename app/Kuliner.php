@@ -13,4 +13,8 @@ class Kuliner extends Model
         {
             return $this->belongsTo('App\Kategori' , 'kategori_id');
         }
+        public function galleri()
+        {
+            return $this->belongsToMany('App\galleri', 'babus', 'kuliner_id','galleri_id');
+        }
 }

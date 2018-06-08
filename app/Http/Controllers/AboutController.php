@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Infopraktis;
+use App\About;
 use Illuminate\Http\Request;
 
-class InfopraktisController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class InfopraktisController extends Controller
      */
     public function index()
     {
-        $info =  Infopraktis::all();
-        return view('info.index', compact('info'));
+        $about =  About::all();
+        return view('about.index', compact('about'));
     }
 
     /**
@@ -24,8 +24,8 @@ class InfopraktisController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('info.create');
+    {   
+        return view('about.create');
     }
 
     /**
@@ -37,65 +37,66 @@ class InfopraktisController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'tips' => 'required|',
+            'deskripsi' => 'required|',
             ]);
-        $info = new Infopraktis;
-        $info->tips = $request->tips;
-        $info->save();
-        return redirect()->route('info.index');
+        $about = new About;
+        $about->deskripsi = $request->deskripsi;
+        $about->save();
+        return redirect()->route('about.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Infopraktis  $infopraktis
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function show(Infopraktis $infopraktis)
+    public function show($id)
     {
-        //
+        $about = About::findOrFail($id);
+        return view('about.edit',compact('about'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Infopraktis  $infopraktis
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $info = Infopraktis::findOrFail($id);
-        return view('info.edit',compact('info'));
+        $about = About::findOrFail($id);
+        return view('about.edit',compact('about'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Infopraktis  $infopraktis
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,$id)
     {
         $this->validate($request,[
-            'tips' => 'required|',
+            'deskripsi' => 'required|',
         ]);
-        $info = Infopraktis::findOrFail($id);
-        $info->tips = $request->tips;
-        $info->save();
-        return redirect()->route('info.index');
+        $about = About::findOrFail($id);
+        $about->deskripsi = $request->deskripsi;
+        $about->save();
+        return redirect()->route('about.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Infopraktis  $infopraktis
+     * @param  \App\About  $about
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $info = Infopraktis::findOrFail($id);
-        $info->delete(); 
-        return redirect()->route('info.index');
+        $about = About::findOrFail($id);
+        $about->delete(); 
+        return redirect()->route('about.index');
     }
 }

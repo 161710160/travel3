@@ -8,7 +8,7 @@
 			  	<div class="panel-title pull-right"><a href="{{ route('travel.create') }}">Tambah</a>
                   </div>
               </div>
-              <h3><u>Travel</u></h3><br>
+              <h3><u><center>Travel</center></u></h3><br>
 			  <div class="panel-body">
 			  	<div class="table-responsive">
 				  <table class="table table-borderless table-striped table-earning">
@@ -16,8 +16,9 @@
 			  		<tr>
 			  		  <th>No</th>
                       <th>Destinasi</th>
-                      <th>Artikel</th>
+                      <th>Deskripsi</th>
 											<th>Kota</th>
+											<th>Photo</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -30,6 +31,7 @@
                         <td>{{ $data->tempat_wisata}}</td>
                         <td>{{ $data->artikel}}</td>
 												<td>{{ $data->kategori->nama_wisata}}</td>
+												<td><img src="{{asset('../img/'.$data->photos.'')}}" width="70" height="70"></td>
 
 <td>
 	<a class="btn btn-warning" href="{{ route('travel.edit',$data->id) }}">Edit</a>

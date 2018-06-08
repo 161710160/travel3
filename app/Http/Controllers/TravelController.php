@@ -41,7 +41,8 @@ class TravelController extends Controller
         $this->validate($request,[
             'tempat_wisata' => 'required|',
             'artikel' => 'required|',
-            'kategori_id' => 'required'
+            'kategori_id' => 'required',
+            
             ]);
         $travel = new Travel;
         $travel->tempat_wisata = $request->tempat_wisata;
