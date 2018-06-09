@@ -31,7 +31,7 @@
                 <td>{{ $data->nama_kuliner}}</td>
                 <td>{{ $data->deskripsi}}</td>
 								<td>{{ $data->kategori->nama_wisata}}</td>
-								<td><img src="{{asset('../img/'.$data->photos.'')}}" width="70" height="70"></td>
+
 
 <td>
 	<a class="btn btn-warning" href="{{ route('kuliner.edit',$data->id) }}">Edit</a>

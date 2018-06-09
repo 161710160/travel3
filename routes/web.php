@@ -29,5 +29,6 @@ Route::group(['prefix'=> 'admin', 'middleware' => ['auth','role:admin']], functi
     Route::resource('kuliner', 'KulinerController');
     Route::resource('galleri', 'GalleriController');
     Route::resource('info', 'InfopraktisController');
-    Route::resource('about', 'AboutController');  
+    Route::resource('about', 'AboutController');
+    Route::resource('artikel', 'ArtikelController');  
 });

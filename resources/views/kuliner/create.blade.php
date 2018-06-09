@@ -47,17 +47,6 @@
                             </span>
                         @endif
 					</div>
-					  <div class="form-group {{ $errors->has('photos') ? ' has-error' : '' }}">
-			  			<label class="control-label">Photo</label>	
-			  			<input type="file" name="photos" class="form-control"  required>
-			  			@if ($errors->has('photos'))
-                            <span class="help-block">
-                                <strong>{{ $errors->first('photos') }}</strong>
-                            </span>
-                        @endif
-			  		</div>
-
-
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-primary">Tambah</button>
 			  		</div>

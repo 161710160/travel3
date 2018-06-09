@@ -66,6 +66,7 @@ class KategoriController extends Controller
      */
     public function edit(Kategori $kategori)
     {
+        $kategori = Kategori::findOrfail($kategori->id);
         return view('kategori.edit',compact('kategori'));
     }
 

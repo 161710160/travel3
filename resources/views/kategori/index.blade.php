@@ -28,7 +28,7 @@
 				    	<td>{{ $data->nama_wisata }}</td>
 
 <td>
-	<a class="btn btn-warning" href="{{ route('kategori.edit',$data->id) }}">Edit</a>
+	<a class="btn btn-warning"  href="{{ route('kategori.edit',$data->id) }}">Edit</a>
 </td>
 <td>
 	<form method="post" action="{{ route('kategori.destroy',$data->id) }}">

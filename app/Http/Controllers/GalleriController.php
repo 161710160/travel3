@@ -89,7 +89,7 @@ class GalleriController extends Controller
         ]);
         $galleri = Galleri::findOrFail($id);
     
-        if ($request->hasFile('photos')){
+        if ($request->hasFile('photos')){ 
             $file = $request->file('photos');
             $destinationPath = public_path() .DIRECTORY_SEPARATOR. 'img';
             $filename = str_random(6).'_'.$file->getClientOriginalName();

@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>Traveller Blogger</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset('assets/admin/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -52,7 +52,7 @@
 
             <!-- MAIN CONTENT-->
             <div class="main-content">
-                @yield('content');
+                @yield('content')
             </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->

@@ -14,7 +14,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        //
+        $artikel =  Artikel::all();
+        return view('artikel.index', compact('artikel'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ArtikelController extends Controller
      */
     public function create()
     {
-        //
+        return view('artikel.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'deskripsi' => 'required|',
+            ]);
+        $artikel = new Artikel;
+        $artikel->deskripsi = $request->deskripsi;
+        $artikel->save();
+        return redirect()->route('artikel.index');
     }
 
     /**
@@ -55,9 +62,10 @@ class ArtikelController extends Controller
      * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Artikel $artikel)
+    public function edit($id)
     {
-        //
+        $artikel = Artikel::findOrfail($id);
+        return view('artikel.edit',compact('artikel'));
     }
 
     /**
@@ -67,9 +75,15 @@ class ArtikelController extends Controller
      * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Artikel $artikel)
+    public function update(Request $request,$id)
     {
-        //
+        $this->validate($request,[
+            'deskripsi' => 'required|',
+        ]);
+        $artikel = Artikel::findOrFail($id);
+        $artikel->deskripsi = $request->deskripsi;
+        $artikel->save();
+        return redirect()->route('artikel.index');
     }
 
     /**
@@ -78,8 +92,10 @@ class ArtikelController extends Controller
      * @param  \App\Artikel  $artikel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Artikel $artikel)
+    public function destroy($id)
     {
-        //
+        $artikel = Artikel::findOrFail($id);
+        $artikel->delete(); 
+        return redirect()->route('artikel.index');
     }
 }

@@ -18,7 +18,6 @@
                       <th>Destinasi</th>
                       <th>Deskripsi</th>
 											<th>Kota</th>
-											<th>Photo</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -31,8 +30,7 @@
                         <td>{{ $data->tempat_wisata}}</td>
                         <td>{{ $data->artikel}}</td>
 												<td>{{ $data->kategori->nama_wisata}}</td>
-												<td><img src="{{asset('../img/'.$data->photos.'')}}" width="70" height="70"></td>
-
+										
 <td>
 	<a class="btn btn-warning" href="{{ route('travel.edit',$data->id) }}">Edit</a>
 </td>
